@@ -15,7 +15,7 @@ def makeGrid():
     return grid
 
 def drawGrid(grid):
-    size = 20
+    size = 10
 
     pygame.init()
     display = pygame.display.set_mode((width, height))
@@ -26,9 +26,8 @@ def drawGrid(grid):
             color = "white"
             if grid[row][cols] == 1:
                 color = "black"
-            rect = pygame.Rect(row, cols, size, size)
-            pygame.draw.rect(display, color, rect)
-            pygame.display.update()
+            rect = pygame.Rect(row, cols, size, size) 
+            pygame.draw.rect(display, color, rect, 1)
 
 def main():
     grid = makeGrid()
@@ -38,6 +37,7 @@ def main():
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+        pygame.display.update()
 
 if __name__ == "__main__":
     main()
