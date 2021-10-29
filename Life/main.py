@@ -23,11 +23,10 @@ def drawGrid(grid):
 
     for row in range(0, width, size):
         for cols in range(0, height, size):
-            color = "white"
             if grid[row][cols] == 1:
-                color = "black"
-            rect = pygame.Rect(row, cols, size, size) 
-            pygame.draw.rect(display, color, rect, 1)
+                pygame.draw.rect(display, "black", row * width)
+            else:
+                pygame.draw.rect(display, "black", cols * height, 1)
 
 def main():
     grid = makeGrid()
