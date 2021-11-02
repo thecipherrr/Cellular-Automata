@@ -8,11 +8,11 @@
 
 # References:
 
-## -Code Base and Logic:
+### -Code Base and Logic:
  https://www.youtube.com/watch?v=d73z8U0iUYE 
 
-## -Toroidal Boundary Conditions modulo: 
+### -Toroidal Boundary Conditions modulo: 
 https://www.youtube.com/watch?v=r5Iy3v1co0A
 
-## -Explanation: 
+### -Explanation: 
 https://www.youtube.com/watch?v=FWSR_7kZuYg&t=1893s
