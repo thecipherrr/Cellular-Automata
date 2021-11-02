@@ -4,7 +4,7 @@ import grid
 
 os.environ["SDL_VIDEO_CENTERED"] = "1"
 
-width, height = 400, 400
+width, height = 1000, 500
 size = (width, height)
 black = (0,0,0)
 white = (255, 255, 255)
@@ -31,7 +31,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
     
-        Grid.gameOfLife(black, white, display)  
+        Grid.gameOfLife(white, black, display)  
 
         pygame.display.update()
     pygame.quit()
