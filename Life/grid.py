@@ -22,7 +22,7 @@ class Grid:
             for j in range(self.cols):
                 self.grid_life[i][j] = random.randint(0,1)
 
-    def neighbours(self, x, y):
+    def getNeighbours(self, x, y):
         # loop from -1, 2 to check all the neighbours
         # then count the total
         total = 0
@@ -44,23 +44,24 @@ class Grid:
 
                 # draw the live and dead cells
                 if self.grid_life[i][j] == 1:
-                    pygame.draw.rect(surface, aliveColor, [x_pos, y_pos, self.resolution-self.margin, 
-                    self.resolution-self.margin])
+                    pygame.draw.rect(surface, aliveColor, [x_pos, y_pos, (self.resolution-self.margin), 
+                    (self.resolution-self.margin)])
                 else:
-                    pygame.draw.rect(surface, deadColor, [x_pos, y_pos, self.resolution-self.margin,
-                    self.resolution-self.margin])
+                    pygame.draw.rect(surface, deadColor, [x_pos, y_pos, (self.resolution-self.margin),
+                    (self.resolution-self.margin)])
 
         # generating the next generation
         nextGrid = np.ndarray(shape=(self.size))
+        
         for i in range(self.row):
             for j in range(self.cols):
-                # get the state of the cell
                 state = self.grid_life[i][j]
-                neighbours = self.neighbours(i, j)
+                neighbours = self.getNeighbours(i,j)
+        # check the rules
                 if state == 0 and neighbours == 3:
                     nextGrid[i][j] = 1
                 elif state == 1 and (neighbours < 2 or neighbours > 3):
                     nextGrid[i][j] = 0
                 else:
                     nextGrid[i][j] = state
-            self.grid_life = nextGrid
+        self.grid_life = nextGrid

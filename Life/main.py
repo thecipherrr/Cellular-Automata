@@ -4,7 +4,7 @@ import grid
 
 os.environ["SDL_VIDEO_CENTERED"] = "1"
 
-width, height = 1366, 768
+width, height = 400, 400
 size = (width, height)
 black = (0,0,0)
 white = (255, 255, 255)
