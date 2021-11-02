@@ -2,7 +2,7 @@
 
 A collection of cellular automata implemented in Python.
 1. The Game of Life
-2. Langton's Ant
+2. Langton's Ant (NOT IMPLEMENTED YET!)
 
 References:
 -Code Base and Logic: https://www.youtube.com/watch?v=d73z8U0iUYE 
