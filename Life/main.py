@@ -14,7 +14,7 @@ display = pygame.display.set_mode(size)
 pygame.display.set_caption("Conway's Game of Life")
 clock = pygame.time.Clock()
 fps =  30
-resolution = 20
+resolution = 10
 margin = 1
 running = True
 
@@ -31,7 +31,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
     
-        Grid.gameOfLife(white, black, display)  
+        Grid.gameOfLife(black, white, display)  
 
         pygame.display.update()
     pygame.quit()
